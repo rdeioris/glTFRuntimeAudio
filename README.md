@@ -10,4 +10,7 @@ Currently supported formats:
 
 ## Examples
 
-Loading and playing an mp3 from an url 
+Loading and playing an mp3 from an url (remember to set AsBlob option in the LoaderConfig)
+
+![image](https://github.com/user-attachments/assets/b6f0e029-d89c-49af-b253-48c563f958ae)
+
