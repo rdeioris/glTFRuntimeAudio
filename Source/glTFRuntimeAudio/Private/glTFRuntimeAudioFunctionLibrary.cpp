@@ -167,9 +167,13 @@ namespace glTFRuntime
 			while (Offset < Source.Num())
 			{
 				int32 NumSamples = mp3dec_decode_frame(&Mp3Decoder, Source.GetData() + Offset, Source.Num() - Offset, Frame, &Mp3FrameInfo);
-				if (NumSamples <= 0)
+				if (NumSamples < 0)
 				{
 					return false;
+				}
+				else if (NumSamples == 0)
+				{
+					break;
 				}
 
 				Offset += Mp3FrameInfo.frame_bytes;
